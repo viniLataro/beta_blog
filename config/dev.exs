@@ -26,7 +26,12 @@ config :beta_blog, BetaBlogWeb.Endpoint,
   secret_key_base: "xhOB03eCtQG6SlwghJjtP7Tk/85IBxdPVc3ugkuVTDvvrACFtIqIoigE/4pa33Nr",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    sass: {
+      DartSass,
+      :install_and_run,
+      [:default, ~w(--embed-source-map --source-map-urls=absolute --watch)]
+    }
   ]
 
 # ## SSL Support
