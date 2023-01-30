@@ -9,11 +9,11 @@
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
   </head>
-  <body>
+  <body class="bg-light ">
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="border navbar navbar-expand-lg bg-white">
           <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Beta Blog</span>
+            <span class="navbar-brand mb-0 h1">BETA BLOG</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,4 +50,9 @@
     </header>
     <%= @inner_content %>
   </body>
+  <footer id="sticky-footer" class="border flex-shrink-0 py-3 bg-dark text-light">
+    <div class="container text-center">
+      <small>Copyright &copy; Vinicius Lataro</small>
+    </div>
+  </footer>
 </html>
